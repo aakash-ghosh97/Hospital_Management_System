@@ -1,0 +1,404 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06A2F47C-F76D-412E-B1F8-62BD9CD21322}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital_Management_System_1</RootNamespace>
+    <AssemblyName>Hospital Management System 1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44329</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin-appointment.aspx" />
+    <Content Include="admin-forgot-password.aspx" />
+    <Content Include="admin-new-password.aspx" />
+    <Content Include="admin-patient-record.aspx" />
+    <Content Include="admin1.aspx" />
+    <Content Include="admin_login.aspx" />
+    <Content Include="admin_registration.aspx" />
+    <Content Include="bill-generate.aspx" />
+    <Content Include="doctor-appointment.aspx" />
+    <Content Include="doctor-medicare.aspx" />
+    <Content Include="doctor-patient-record.aspx" />
+    <Content Include="doctor-test-result.aspx" />
+    <Content Include="doctor1.aspx" />
+    <Content Include="doctor_login.aspx" />
+    <Content Include="doctor_registration.aspx" />
+    <Content Include="doctor-forgot-password.aspx" />
+    <Content Include="home-page.aspx" />
+    <Content Include="home_page.html" />
+    <Content Include="know-your-doctor.aspx" />
+    <Content Include="doctor-new-password.aspx" />
+    <Content Include="patient-book-appointment.aspx" />
+    <Content Include="patient-feedback.aspx" />
+    <Content Include="patient-forgot-password.aspx" />
+    <Content Include="patient-medicare.aspx" />
+    <Content Include="patient-new-password.aspx" />
+    <Content Include="patient-test-result.aspx" />
+    <Content Include="patient-treatment-history.aspx" />
+    <Content Include="patient-view-appointment.aspx" />
+    <Content Include="patient-registration.aspx" />
+    <Content Include="patient1.aspx" />
+    <Content Include="patient-appointment.aspx" />
+    <Content Include="patient_login.aspx" />
+    <Content Include="review-questionare.aspx" />
+    <Content Include="test-result.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin-appointment.aspx.cs">
+      <DependentUpon>admin-appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-appointment.aspx.designer.cs">
+      <DependentUpon>admin-appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-forgot-password.aspx.cs">
+      <DependentUpon>admin-forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-forgot-password.aspx.designer.cs">
+      <DependentUpon>admin-forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-new-password.aspx.cs">
+      <DependentUpon>admin-new-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-new-password.aspx.designer.cs">
+      <DependentUpon>admin-new-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-patient-record.aspx.cs">
+      <DependentUpon>admin-patient-record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-patient-record.aspx.designer.cs">
+      <DependentUpon>admin-patient-record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin1.aspx.cs">
+      <DependentUpon>admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin1.aspx.designer.cs">
+      <DependentUpon>admin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.aspx.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_login.aspx.designer.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_registration.aspx.cs">
+      <DependentUpon>admin_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_registration.aspx.designer.cs">
+      <DependentUpon>admin_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bill-generate.aspx.cs">
+      <DependentUpon>bill-generate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bill-generate.aspx.designer.cs">
+      <DependentUpon>bill-generate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-appointment.aspx.cs">
+      <DependentUpon>doctor-appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-appointment.aspx.designer.cs">
+      <DependentUpon>doctor-appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-medicare.aspx.cs">
+      <DependentUpon>doctor-medicare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-medicare.aspx.designer.cs">
+      <DependentUpon>doctor-medicare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-patient-record.aspx.cs">
+      <DependentUpon>doctor-patient-record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-patient-record.aspx.designer.cs">
+      <DependentUpon>doctor-patient-record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-test-result.aspx.cs">
+      <DependentUpon>doctor-test-result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-test-result.aspx.designer.cs">
+      <DependentUpon>doctor-test-result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor1.aspx.cs">
+      <DependentUpon>doctor1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor1.aspx.designer.cs">
+      <DependentUpon>doctor1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor_login.aspx.cs">
+      <DependentUpon>doctor_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor_login.aspx.designer.cs">
+      <DependentUpon>doctor_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor_registration.aspx.cs">
+      <DependentUpon>doctor_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor_registration.aspx.designer.cs">
+      <DependentUpon>doctor_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-forgot-password.aspx.cs">
+      <DependentUpon>doctor-forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-forgot-password.aspx.designer.cs">
+      <DependentUpon>doctor-forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home-page.aspx.cs">
+      <DependentUpon>home-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home-page.aspx.designer.cs">
+      <DependentUpon>home-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="know-your-doctor.aspx.cs">
+      <DependentUpon>know-your-doctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="know-your-doctor.aspx.designer.cs">
+      <DependentUpon>know-your-doctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctor-new-password.aspx.cs">
+      <DependentUpon>doctor-new-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctor-new-password.aspx.designer.cs">
+      <DependentUpon>doctor-new-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-book-appointment.aspx.cs">
+      <DependentUpon>patient-book-appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-book-appointment.aspx.designer.cs">
+      <DependentUpon>patient-book-appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-feedback.aspx.cs">
+      <DependentUpon>patient-feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-feedback.aspx.designer.cs">
+      <DependentUpon>patient-feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-forgot-password.aspx.cs">
+      <DependentUpon>patient-forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-forgot-password.aspx.designer.cs">
+      <DependentUpon>patient-forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-medicare.aspx.cs">
+      <DependentUpon>patient-medicare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-medicare.aspx.designer.cs">
+      <DependentUpon>patient-medicare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-new-password.aspx.cs">
+      <DependentUpon>patient-new-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-new-password.aspx.designer.cs">
+      <DependentUpon>patient-new-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-test-result.aspx.cs">
+      <DependentUpon>patient-test-result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-test-result.aspx.designer.cs">
+      <DependentUpon>patient-test-result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-treatment-history.aspx.cs">
+      <DependentUpon>patient-treatment-history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-treatment-history.aspx.designer.cs">
+      <DependentUpon>patient-treatment-history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-view-appointment.aspx.cs">
+      <DependentUpon>patient-view-appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-view-appointment.aspx.designer.cs">
+      <DependentUpon>patient-view-appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-registration.aspx.cs">
+      <DependentUpon>patient-registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-registration.aspx.designer.cs">
+      <DependentUpon>patient-registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient1.aspx.cs">
+      <DependentUpon>patient1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient1.aspx.designer.cs">
+      <DependentUpon>patient1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient-appointment.aspx.cs">
+      <DependentUpon>patient-appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient-appointment.aspx.designer.cs">
+      <DependentUpon>patient-appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="patient_login.aspx.cs">
+      <DependentUpon>patient_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patient_login.aspx.designer.cs">
+      <DependentUpon>patient_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="review-questionare.aspx.cs">
+      <DependentUpon>review-questionare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="review-questionare.aspx.designer.cs">
+      <DependentUpon>review-questionare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test-result.aspx.cs">
+      <DependentUpon>test-result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test-result.aspx.designer.cs">
+      <DependentUpon>test-result.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54730</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
